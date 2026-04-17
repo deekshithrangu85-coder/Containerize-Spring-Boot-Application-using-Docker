@@ -11,6 +11,11 @@ public class HelloController {
     @Autowired
     private UserRepository userRepository;
 
+    @GetMapping("/")
+    public String home() {
+        return "Spring Boot App is running 🚀";
+    }
+
     @GetMapping("/hello")
     public String hello() {
         return "Hello Docker!";
